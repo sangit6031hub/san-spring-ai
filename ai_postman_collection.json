@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "58bb5782-45bf-464b-a6a8-3ef483e7723e",
+		"name": "AI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37085115"
+	},
+	"item": [
+		{
+			"name": "OpenAPI",
+			"item": [
+				{
+					"name": "Sample OpenAPI",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk-proj-jS8U8F4HxGo1NVJyKt4hT3BlbkFJiOQBqhzvTA4gOrJZ6ysz",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model\": \"gpt-4o-mini\",\n    \"messages\": [\n      {\n        \"role\": \"system\",\n        \"content\": \"You are a poetic assistant, skilled in explaining complex programming concepts with creative flair.\"\n      },\n      {\n        \"role\": \"user\",\n        \"content\": \"Compose a poem that explains the concept of recursion in programming.\"\n      }\n    ]\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.openai.com/v1/chat/completions",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openai",
+								"com"
+							],
+							"path": [
+								"v1",
+								"chat",
+								"completions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ask - sky blue",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "sk-proj-jS8U8F4HxGo1NVJyKt4hT3BlbkFJiOQBqhzvTA4gOrJZ6ysz",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model\": \"gpt-4o-mini\",\n    \"messages\": [\n      {\n        \"role\": \"user\",\n        \"content\": \"why sky is blue\"\n      }\n    ]\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.openai.com/v1/chat/completions",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openai",
+								"com"
+							],
+							"path": [
+								"v1",
+								"chat",
+								"completions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Spring AI",
+			"item": [
+				{
+					"name": "Top Songs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/topsongs?year=2020",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"topsongs"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2020"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ask - sky is blue",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"question\": \"why sky is blue\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/ask",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ask Joke",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"question\": \"tell me a joke\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/ask",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ask Card rules Tika",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"question\": \"tell me a joke\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/ask",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ask"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
